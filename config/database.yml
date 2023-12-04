@@ -16,4 +16,4 @@ test:
 
 production:
   <<: *default
-  password: <%= ENV["FINAL_CAPSTONE_DATABASE_PASSWORD"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
