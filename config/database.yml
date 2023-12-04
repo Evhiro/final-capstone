@@ -4,7 +4,6 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: <%= ENV["DATABASE_USERNAME"] %>
   password: <%= ENV["DATABASE_PASSWORD"] %>
-  host: <%= ENV["DATABASE_HOST"] %>
 
 development:
   <<: *default
@@ -16,4 +15,4 @@ test:
 
 production:
   <<: *default
-  password: <%= ENV["DATABASE_PASSWORD"] %>
+  database: fina_capstone_production
