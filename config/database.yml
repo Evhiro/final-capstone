@@ -2,13 +2,15 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV["DATABASE_USERNAME"] %>
-  password: <%= ENV["DATABASE_PASSWORD"] %>
-  host: <%= ENV["DATABASE_HOST"] %>
+  username: evhiro
+  password: eLN8FdqImq3ZNvJkys65SErlJwdCcnzE
+  host: dpg-clmtp938772c73e1hrvg-a.singapore-postgres.render.com
+  port: 5432
+  database: final_capstone_c8le
 
 development:
   <<: *default
-  database: final_capstone_development
+  database: final_capstone_c8le
 
 test:
   <<: *default
@@ -16,4 +18,8 @@ test:
 
 production:
   <<: *default
-  password: <%= ENV["FINAL_CAPSTONE_DATABASE_PASSWORD"] %>
+  username: evhiro
+  password: eLN8FdqImq3ZNvJkys65SErlJwdCcnzE
+  host: dpg-clmtp938772c73e1hrvg-a.singapore-postgres.render.com
+  port: 5432
+  database: final_capstone_c8le

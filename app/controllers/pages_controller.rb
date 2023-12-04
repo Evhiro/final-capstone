@@ -59,22 +59,25 @@ class PagesController < ApplicationController
 
     def create
         user = Login.find_by(email: params[:email])
-
-        if user && user.authenticate(params[:password])
-            session[:user_id] = user.id
-            
-         case params[:account_type]
-             when "student"
-                redirect_to student_dashboard_path
-             when "teacher"
-                redirect_to teacher_dashboard_path
-             when "admin"
-                redirect_to student_table_path
-         end
+    
+        if user && user.authenticate(params[:password]) && user.account_type == params[:account_type]
+          session[:user_id] = user.id
+    
+          case params[:account_type]
+          when "admin"
+            redirect_to student_table_path
+          when "student"
+            redirect_to student_dashboard_path
+          when "teacher"
+            redirect_to teacher_dashboard_path
+          else
+            redirect_to root_path
+          end
         else
-            flash.now[alert] = "Invalid email or password"
+          flash.now[:alert] = "Invalid email or password"
+          redirect_to root_path
         end
-    end
+      end
 
     def destroy
         session[:user_id] = nil

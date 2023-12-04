@@ -9,7 +9,7 @@
   <p class="flash alert"><%= flash[:alert] %></p>
 <% end %>
 
-<form action="<%= student_table_path %>" method="post">
+<form action="<%= admin_log_path %>" method="post">
   <div>
     <label for="email">Email:</label>
     <input type="email" name="email" id="email" required>
@@ -20,6 +20,8 @@
     <input type="password" name="password" id="password" required>
   </div>
 
+  <!-- CSRF token -->
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <!-- Add a hidden field for account type -->
   <input type="hidden" name="account_type" value="admin">
 
