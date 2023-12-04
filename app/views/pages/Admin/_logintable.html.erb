@@ -1,0 +1,44 @@
+<%= render "pages/Admin/header" %>
+<main class="flex">
+<nav id="menu" class="border-r-[1px] shadow-lg border-solid border-black-400 w-64 h-screen">
+        <div class="text-gray-600 text-sm text-center p-3">MENU BAR --></div>
+        <div class="font-semibold p-2 hover:bg-slate-100 hover:border-l-4 border-green-500" aria-current="page"><%= link_to "Student Database", student_table_path %></div>
+        <div class="font-semibold p-2 hover:bg-slate-100 hover:border-l-4 border-green-500"><%= link_to "Teacher Database", teacher_table_path %> </div>
+        <div class="font-semibold p-2 bg-slate-100 border-l-4 border-green-500"><%= link_to "Manage Account", login_table_path %> </div>
+    </nav>
+    <div>
+        <div class="border-[1px] border-solid border-gray-200 bg-gray-100 text-gray-400 w-[83vw] h-12 m-5 mb-7 rounded-lg flex items-center pl-2">Manage Account</div>
+<div>
+<h2>Student Registration</h2>
+
+<% if flash[:alert] %>
+  <p class="alert"><%= flash[:alert] %></p>
+<% end %>
+
+<form action="<%= root_path %>" method="post">
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+  </div>
+
+  <div>
+    <label for="account_type">Account Type:</label>
+    <select name="account_type" id="account_type" required>
+      <option value="student">Admin</option>
+      <option value="student">Teacher</option>
+      <option value="student">Student</option>
+    </select>
+  </div>
+
+  <div>
+    <input type="submit" value="Register">
+  </div>
+</form>
+</div>
+    </div>
+</main>

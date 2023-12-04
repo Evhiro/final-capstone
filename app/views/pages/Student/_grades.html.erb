@@ -1,0 +1,16 @@
+<%= render "pages/Student/header" %>
+<main class="flex">
+ <nav id="menu" class="border-r-[1px] shadow-lg border-solid border-black-400 w-64 h-[590px]">
+        <div class="text-gray-600 text-sm text-center p-3">MENU BAR --></div>
+        <div class="font-semibold p-2 hover:bg-slate-100 hover:border-l-4 border-green-500"><%= link_to "Dashboard", student_dashboard_path %></div>
+        <div class="font-semibold p-2 bg-slate-100 border-l-4 border-green-500"  aria-current="page"><%= link_to "Grades", student_grades_path %> </div>
+        <div class="font-semibold p-2 hover:bg-slate-100 hover:border-l-4 border-green-500"><%= link_to "Annoucement", student_announcement_path %></div>
+        <div class="font-semibold p-2 hover:bg-slate-100 hover:border-l-4 border-green-500"><%= link_to "Schedule", student_schedule_path %></div>
+ </nav>
+    <div>
+        <div class="border-[1px] border-solid border-gray-200 bg-gray-100 text-gray-400 w-[83vw] h-12 m-5 mb-7 rounded-lg flex items-center pl-2">Grades</div>
+        <div class="border-[1px] border-solid border-black-500 h-[70vh] m-4 flex justify-around pt-10">
+            <p></p>
+        </div>
+    </div>
+    </main>

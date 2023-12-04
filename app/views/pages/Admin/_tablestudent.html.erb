@@ -1,0 +1,63 @@
+<%= render "pages/Admin/header" %>
+<main class="flex">
+    <nav id="menu" class="border-r-[1px] shadow-lg border-solid border-black-400 w-64 h-screen">
+        <div class="text-gray-600 text-sm text-center p-3">MENU BAR --></div>
+        <div class="font-semibold p-2 bg-slate-100 border-l-4 border-green-500" aria-current="page"><%= link_to "Student Database", student_table_path %></div>
+        <div class="font-semibold p-2 hover:bg-slate-100 hover:border-l-4 border-green-500"><%= link_to "Teacher Database", teacher_table_path %> </div>
+    </nav>
+    <div>
+        <div class="border-[1px] border-solid border-gray-200 bg-gray-100 text-gray-400 w-[83vw] h-12 m-5 mb-7 rounded-lg flex items-center pl-2">STUDENT DATABASE</div>
+        <div class="border-[1px] border-solid border-black-500 h-96 m-4 flex justify-around pt-10">
+            <div class="flex flex-1 flex-col items-center">
+                <div class="bg-green-500 border-[1px] border-solid border-black-800 shadow-lg m-2 w-36 h-8 text-center self-start ml-24">Student Info:</div>
+                    <table class="border-[1px] border-solid border-black w-96">
+                    <th class="border-[1px] border-solid border-black bg-gray-300">Student Info:</th>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                </table>
+                    <div class="flex gap-4 p-5">
+                    <div class="border-solid border-black-800 border-2 w-16 rounded-md text-center text-green-800 shadow-lg hover:bg-slate-200 hover:cursor-pointer active:outline-none active:ring active:ring-green-500">Add</div>
+                    <div class="border-solid border-black-800 border-2 w-16 rounded-md text-center text-green-800 shadow-lg hover:bg-slate-200 hover:cursor-pointer active:outline-none active:ring active:ring-green-500">Update</div>
+                    <div class="border-solid border-black-800 border-2 w-16 rounded-md text-center text-green-800 shadow-lg hover:bg-slate-200 hover:cursor-pointer active:outline-none active:ring active:ring-green-500">Display</div>
+                    <div class="border-solid border-black-800 border-2 w-16 rounded-md text-center text-green-800 shadow-lg hover:bg-slate-200 hover:cursor-pointer active:outline-none active:ring active:ring-green-500">Search</div>
+                    <div class="border-solid border-black-800 border-2 w-16 rounded-md text-center text-green-800 shadow-lg hover:bg-slate-200 hover:cursor-pointer active:outline-none active:ring active:ring-green-500">Delete</div>
+                    <div class="border-solid border-black-800 border-2 w-16 rounded-md text-center text-green-800 shadow-lg hover:bg-slate-200 hover:cursor-pointer active:outline-none active:ring active:ring-green-500">Clear</div>
+                </div>
+            </div>
+            <div class="flex flex-col flex-1 items-center">
+                <div class="bg-green-500 border-2 border-solid border-black-800 shadow-lg m-2 w-36 h-8 text-center self-start ml-24">Student Details:</div>
+                <table class="border-[1px] border-solid border-black w-96">
+                    <th class="border-[1px] border-solid border-black bg-gray-300">Student Details:</th>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
