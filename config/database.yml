@@ -15,4 +15,4 @@ test:
 
 production:
   <<: *default
-  database: fina_capstone_production
+  database: final_capstone_production
